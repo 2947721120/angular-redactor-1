@@ -4,9 +4,13 @@
 	var module = angular.module('myApp', []);
 
 	module.controller("myCtrl", [
-		'$scope',
-		function ($scope) {
-			$scope.text = "<strong>Hello world</strong>";
+		'$scope', '$timeout',
+		function ($scope, $timeout) {
+			$scope.text = "Hello";
+
+			$timeout(function () {
+				$scope.text += " <strong>world!</strong>";
+			}, 1000);
 		}
 	]);
 
