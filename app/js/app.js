@@ -38,7 +38,7 @@
 
 					// model -> view
 					controller.$render = function () {
-						instance.set(controller.$viewValue || "");
+						instance.set(controller.$viewValue || "");
 						initialised = true;
 					};
 
